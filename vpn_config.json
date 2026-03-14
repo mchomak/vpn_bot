@@ -1,0 +1,37 @@
+{
+  "vpn_servers": {
+    "finland": {
+      "title": "Финляндия",
+      "flag": "🇫🇮",
+      "enabled": true,
+      "plans": [
+        {"key": "1m", "title": "1 месяц", "price": 300, "duration_days": 30},
+        {"key": "3m", "title": "3 месяца", "price": 800, "duration_days": 90},
+        {"key": "6m", "title": "6 месяцев", "price": 1500, "duration_days": 180},
+        {"key": "12m", "title": "12 месяцев", "price": 2800, "duration_days": 360}
+      ]
+    },
+    "germany": {
+      "title": "Германия",
+      "flag": "🇩🇪",
+      "enabled": true,
+      "plans": [
+        {"key": "1m", "title": "1 месяц", "price": 300, "duration_days": 30},
+        {"key": "3m", "title": "3 месяца", "price": 800, "duration_days": 90},
+        {"key": "6m", "title": "6 месяцев", "price": 1500, "duration_days": 180},
+        {"key": "12m", "title": "12 месяцев", "price": 2800, "duration_days": 360}
+      ]
+    },
+    "netherlands": {
+      "title": "Нидерланды",
+      "flag": "🇳🇱",
+      "enabled": true,
+      "plans": [
+        {"key": "1m", "title": "1 месяц", "price": 300, "duration_days": 30},
+        {"key": "3m", "title": "3 месяца", "price": 800, "duration_days": 90},
+        {"key": "6m", "title": "6 месяцев", "price": 1500, "duration_days": 180},
+        {"key": "12m", "title": "12 месяцев", "price": 2800, "duration_days": 360}
+      ]
+    }
+  }
+}
