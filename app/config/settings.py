@@ -32,6 +32,7 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
         populate_by_name = True
+        extra = "ignore"
 
 
 settings = Settings()
