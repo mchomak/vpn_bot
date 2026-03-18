@@ -37,8 +37,8 @@ def create_app() -> web.Application:
 
     dp.include_router(get_main_router())
 
-    dp.startup.register(lambda: on_startup(bot))
-    dp.shutdown.register(lambda: on_shutdown(bot))
+    dp.startup.register(on_startup)
+    dp.shutdown.register(on_shutdown)
 
     scheduler = setup_scheduler(bot)
 
