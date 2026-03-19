@@ -22,14 +22,25 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    ports:
-      - "8080:8080"
     environment:
       DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-vpnbot}:${POSTGRES_PASSWORD:-vpnbot}@db:5432/${POSTGRES_DB:-vpnbot}
     env_file:
       - .env
     volumes:
       - ./vpn_config.json:/app/vpn_config.json:ro
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - bot
 
   migrate:
     build: .
@@ -46,3 +57,5 @@ services:
 
 volumes:
   pg_data:
+  caddy_data:
+  caddy_config:
