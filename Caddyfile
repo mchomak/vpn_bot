@@ -1,3 +1,7 @@
+{
+    http_port 8880
+}
+
 vpnbot756.duckdns.org {
     reverse_proxy bot:8080
 }
